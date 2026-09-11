@@ -5,7 +5,7 @@ export const certifications: Certification[] = [
     title: "Full Stack Java (MERN)",
     provider: "Digital Lync",
     year: "2022 – 2023",
-    link: "",
+    link: "https://www.digital-lync.com/",
   },
   {
     title: "Crash Course in Python",

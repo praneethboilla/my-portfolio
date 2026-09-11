@@ -65,6 +65,23 @@ html.dark .link-underline {
 }
 
 @layer components {
+  .hero-stage {
+    background-image:
+      linear-gradient(rgb(var(--color-line) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--color-line) / 0.3) 1px, transparent 1px),
+      radial-gradient(circle at 76% 22%, rgb(var(--color-teal) / 0.14), transparent 28rem);
+    background-position: center, center, center;
+    background-size: 4rem 4rem, 4rem 4rem, auto;
+  }
+
+  .hero-stage::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    background: linear-gradient(90deg, rgb(var(--color-paper) / 0.96) 0%, transparent 38%, transparent 72%, rgb(var(--color-paper) / 0.6) 100%);
+  }
+
   .link-underline {
     @apply relative text-ink;
     background-image: linear-gradient(currentColor, currentColor);
@@ -76,5 +93,11 @@ html.dark .link-underline {
 
   .link-underline:hover {
     background-size: 100% 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-stage {
+    background-image: radial-gradient(circle at 76% 22%, rgb(var(--color-teal) / 0.08), transparent 28rem);
   }
 }

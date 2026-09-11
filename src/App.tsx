@@ -5,10 +5,11 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Certifications from "./components/Certifications";
+import GlowCursor from "./components/GlowCursor";
 
 export default function App() {
   const [isDark, setIsDark] = useState(() => {
-    return localStorage.getItem("portfolio-theme") === "dark";
+    return localStorage.getItem("portfolio-theme") !== "light";
   });
 
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen">
+      <GlowCursor />
       <Nav isDark={isDark} onToggleTheme={() => setIsDark((current) => !current)} />
       <main>
         <Hero />

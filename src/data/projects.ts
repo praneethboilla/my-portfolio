@@ -30,7 +30,7 @@ export const projects: Project[] = [
   {
     id: "proj-04",
     title: "EasyOp",
-    year: "2026",
+    year: "2024",
     description:
       "An online OP appointment booking platform that helps patients find hospitals, departments, doctors, and available consultation slots.",
     stack: ["React Native", "TypeScript", "Redux"],
@@ -54,7 +54,7 @@ export const projects: Project[] = [
   {
     id: "proj-07",
     title: "MSAL Authentication",
-    year: "2026",
+    year: "2024",
     description:
       "Integrated Microsoft Authentication Library into a React Native application with secure authentication, session management, and access-token handling.",
     stack: ["React Native", "TypeScript", "MSAL", "Azure AD"],
@@ -71,7 +71,7 @@ export const projects: Project[] = [
   {
     id: "proj-09",
     title: "Grad Stickers",
-    year: "2025",
+    year: "2024",
     description:
       "A MERN-based e-commerce application for browsing, selecting, and purchasing customizable wall stickers.",
     stack: ["React", "Redux", "Node.js", "Express", "MongoDB", "JWT"],

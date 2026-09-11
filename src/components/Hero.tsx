@@ -24,8 +24,9 @@ const rise = {
 
 export default function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-5xl px-6 pb-20 pt-16 sm:pt-24">
-      <motion.div
+    <section id="top" className="hero-stage relative overflow-hidden border-b border-line">
+      <div className="relative z-10 mx-auto max-w-5xl px-6 pb-20 pt-16 sm:pt-24">
+        <motion.div
         variants={container}
         initial="hidden"
         animate="show"
@@ -86,7 +87,8 @@ export default function Hero() {
           <p className="mt-3 font-mono text-xs text-ink-soft">Open to — new work</p>
         </motion.div>
 
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

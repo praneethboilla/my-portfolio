@@ -1,3 +1,4 @@
+import { Link2 } from "lucide-react";
 import { certifications } from "../data/certifications";
 
 export default function Certifications() {
@@ -20,7 +21,7 @@ export default function Certifications() {
                     <span className="flex items-center gap-2 font-display text-xl">
                       {certification.title}
                       <span aria-hidden="true" className="text-base text-teal">
-                        ↗
+                        <Link2 size={16} />
                       </span>
                     </span>
                     <span className="font-mono text-xs text-ink-soft">

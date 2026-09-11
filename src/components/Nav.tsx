@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 
 const links = [
   { href: "#work", label: "Work" },
@@ -29,7 +30,7 @@ export default function Nav({ isDark, onToggleTheme }: NavProps) {
           aria-controls="mobile-navigation"
           className="flex h-8 w-8 items-center justify-center text-lg text-teal sm:hidden"
         >
-          <span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
+          {menuOpen ? <X aria-hidden="true" size={18} /> : <Menu aria-hidden="true" size={18} />}
           <span className="sr-only">{menuOpen ? "Close menu" : "Open menu"}</span>
         </button>
         <ul className="hidden items-center gap-6 text-sm text-ink-soft sm:flex">
@@ -63,11 +64,9 @@ export default function Nav({ isDark, onToggleTheme }: NavProps) {
               aria-pressed={isDark}
               aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
               title={isDark ? "Switch to light mode" : "Switch to dark mode"}
-              className="flex h-6 w-6 shrink-0 items-center justify-center text-sm text-teal transition-transform hover:scale-105"
+              className="flex h-6 w-6 shrink-0 items-center justify-center text-sm text-teal transition-transform hover:scale-110"
             >
-              <span aria-hidden="true" className="text-base">
-                {isDark ? "☀" : "☾"}
-              </span>
+              {isDark ? <Sun aria-hidden="true" size={15} /> : <Moon aria-hidden="true" size={15} />}
             </button>
           </li>
         </ul>
@@ -94,7 +93,7 @@ export default function Nav({ isDark, onToggleTheme }: NavProps) {
               aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
               className="flex items-center gap-2 py-1 text-teal"
             >
-              <span aria-hidden="true">{isDark ? "☀" : "☾"}</span>
+              {isDark ? <Sun aria-hidden="true" size={15} /> : <Moon aria-hidden="true" size={15} />}
               {isDark ? "Light mode" : "Dark mode"}
             </button>
           </li>
